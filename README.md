@@ -16,7 +16,7 @@ Perfect Salesforce Lightning Modal Window based on [SLDS Modal](https://www.ligh
 - [Examples](#examples)
 - [Install](#install)
 - [Usage](#usage)
-	- [Component](#component)
+    - [Component](#component)
     - [Controller](#controller)
 - [Documentation](#documentation)
     - [Attributes](#attributes)

@@ -1,6 +1,6 @@
 <aura:documentation>
-	<aura:description>
-		<p>Perfect Salesforce Lightning Modal Window based on <a href="https://www.lightningdesignsystem.com/components/modals/">SLDS Modal</a> Guidelines.</p>
+    <aura:description>
+        <p>Perfect Salesforce Lightning Modal Window based on <a href="https://www.lightningdesignsystem.com/components/modals/">SLDS Modal</a> Guidelines.</p>
         <p>For more informations visit <a href="https://github.com/MichalVavra/light-modal">MichalVavra/light-modal</a> GitHub repository.</p>
         
         <h4>Attributes</h4>
@@ -66,5 +66,5 @@
             <li><code>open()</code></li>
             <li><code>close()</code></li>
         </ul>
-	</aura:description>
+    </aura:description>
 </aura:documentation>
