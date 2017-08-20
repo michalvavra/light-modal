@@ -1,0 +1,46 @@
+<!--
+    @author Michal Vavra <michal.vavra@bluewolf.com> 2017
+    @date   2017, August
+-->
+<aura:component extensible="true">
+    <aura:attribute name="isActive" type="Boolean" description="Internal attribute. Please, for opening and closing modal use open and close methods." />
+
+    <aura:attribute name="title" type="String" description="Optional title of the modal." />
+    <aura:attribute name="tagline" type="Aura.Component[]" description="Paragraph under the title." />
+    <aura:attribute name="actions" type="Aura.Component[]" description="The bottom of the modal." />
+
+    <aura:attribute name="class" type="String" description="A CSS classes to be attached to the modal. Classes are added in addition to base styles." />
+    <aura:attribute name="isLarge" type="Boolean" default="false" description="Specifies whether the modal should be extra wide. Default value is &quot;false&quot;." />
+    <aura:attribute name="isDirectional" type="Boolean" default="false" description="Specifies whether the modal action buttons directional (one button aligned on the left and one on the right for example). Default value is &quot;false&quot;." />
+    <aura:attribute name="allowClose" type="Boolean" default="true" description="Specifies whether the modal can be closed by clicking on the close icon or outside of the window. Default value is &quot;true&quot;." />
+
+    <aura:method name="open" />
+    <aura:method name="close" />
+
+    <aura:if isTrue="{!v.isActive}">
+        <section aura:id="modal" role="dialog" tabindex="-1" class="slds-modal">
+            <div class="slds-modal__container">
+                <header class="{!join(' ', 'slds-modal__header', and(empty(v.title), empty(v.tagline)) ? 'slds-modal__header_empty' : '')}">
+                    <aura:if isTrue="{!v.allowClose}">
+                        <lightning:buttonIcon iconName="utility:close" onclick="{!c.close}" alternativeText="Close" variant="bare" size="large" class="slds-modal__close slds-button_icon-inverse" />
+                    </aura:if>
+                    <aura:if isTrue="{!not(empty(v.title))}">
+                        <h2 class="slds-text-heading_medium slds-hyphenate">{!v.title}</h2>
+                    </aura:if>
+                    <aura:if isTrue="{!not(empty(v.tagline))}">
+                        <p class="slds-m-top_x-small">{!v.tagline}</p>
+                    </aura:if>
+                </header>
+                <div class="slds-modal__content slds-p-around--large">
+                    {!v.body}
+                </div>
+                <aura:if isTrue="{!not(empty(v.actions))}">
+                    <footer class="{!join(' ', 'slds-modal__footer', v.isDirectional ? 'slds-modal__footer_directional' : '')}">
+                        {!v.actions}
+                    </footer>
+                </aura:if>
+            </div>
+        </section>
+    </aura:if>
+    <div aura:id="backdrop" class="slds-backdrop"></div>
+</aura:component>

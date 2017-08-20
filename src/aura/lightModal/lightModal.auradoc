@@ -1,0 +1,70 @@
+<aura:documentation>
+	<aura:description>
+		<p>Perfect Salesforce Lightning Modal Window based on <a href="https://www.lightningdesignsystem.com/components/modals/">SLDS Modal</a> Guidelines.</p>
+        <p>For more informations visit <a href="https://github.com/MichalVavra/light-modal">MichalVavra/light-modal</a> GitHub repository.</p>
+        
+        <h4>Attributes</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>title</code></td>
+                    <td><code>String</code></td>
+                    <td><code>false</code></td>
+                    <td>Title of the modal. Rendered at the top.</td>
+                </tr>
+                <tr>
+                    <td><code>tagline</code></td>
+                    <td><code>Aura.Component[]</code></td>
+                    <td><code>false</code></td>
+                    <td>Paragraph under the title.</td>
+                </tr>
+                <tr>
+                    <td><code>actions</code></td>
+                    <td><code>Aura.Component[]</code></td>
+                    <td><code>false</code></td>
+                    <td>The bottom of the modal.</td>
+                </tr>
+                <tr>
+                    <td><code>class</code></td>
+                    <td><code>String</code></td>
+                    <td><code>false</code></td>
+                    <td>A CSS classes to be attached to the modal. Classes are added in addition to base styles.</td>
+                </tr>
+                <tr>
+                    <td><code>isLarge</code></td>
+                    <td><code>Boolean</code></td>
+                    <td><code>false</code></td>
+                    <td>Specifies whether the modal should be extra wide. Default value is <code>false</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>isDirectional</code></td>
+                    <td><code>Boolean</code></td>
+                    <td><code>false</code></td>
+                    <td>Specifies whether the modal action buttons directional (one button aligned on the left and one on the right for
+                        example). Default value is <code>false</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>allowClose</code></td>
+                    <td><code>Boolean</code></td>
+                    <td><code>false</code></td>
+                    <td>Specifies whether the modal can be closed by clicking on the close icon or outside of the window. Default value
+                        is <code>true</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Methods</h4>
+        <ul>
+            <li><code>open()</code></li>
+            <li><code>close()</code></li>
+        </ul>
+	</aura:description>
+</aura:documentation>
