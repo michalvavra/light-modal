@@ -47,12 +47,14 @@
         },
 
         onOutsideClick: function(domEvent, component) {
-            var tagName = domEvent.target.tagName.toLowerCase();
+            var element = domEvent.target;
 
-            if (tagName === 'section' ||
-                    tagName === 'div' && domEvent.target.classList.contains('slds-modal__container')) {
-
-                this.close(component);
+            if (!$A.util.isUndefined(element.tagName)) {
+                var elementName = element.tagName.toLowerCase();
+                if (elementName === 'section' ||
+                        elementName === 'div' && domEvent.target.classList.contains('slds-modal__container')) {
+                    this.close(component);
+                }
             }
         }
     },
