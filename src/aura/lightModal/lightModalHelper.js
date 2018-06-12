@@ -1,7 +1,3 @@
-/**
- * @author Michal Vavra <michal.vavra@bluewolf.com>
- * @date   2017, August
- */
 ({
     open: function(component) {
         component.set('v.isActive', true);
